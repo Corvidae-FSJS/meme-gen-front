@@ -1,4 +1,12 @@
-import Enzyme from 'ennyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { createStore, compose, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import reducer from './reducers';
 
-Enzyme.configure({ adapter: new Adapter() });
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export default createStore(
+  reducer,
+  composeEnhancers(
+    applyMiddleware(thunk)
+  )
+);
