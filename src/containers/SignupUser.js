@@ -8,7 +8,7 @@ const mapStateToProps = () => ({
 
 const mapDispatchToProps = dispatch => ({
   handleSubmit(event, username, password) {
-    event.preventDefault()
+    event.preventDefault();
     dispatch(sessionSignup(username, password));
   }
 });

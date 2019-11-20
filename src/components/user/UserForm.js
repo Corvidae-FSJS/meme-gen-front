@@ -9,7 +9,7 @@ const UserForm = ({ buttonText, handleSubmit }) => {
     <form onSubmit={event => handleSubmit(event, username, password)}>
       <input type="text" value={username} onChange={({ target }) => setUsername(target.value)} />
       <input type="password" value={password} onChange={({ target }) => setPassword(target.value)} />
-    <button>{buttonText}</button>
+      <button>{buttonText}</button>
     </form>
   );
 };

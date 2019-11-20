@@ -16,7 +16,7 @@ export const sessionLogin = (username, password) => dispatch => {
     .then(user => {
       dispatch({
         type: SET_SESSION,
-        payload: username
+        payload: user
       });
     });
 };
