@@ -13,7 +13,7 @@ const Meme = ({ top, imageUrl, bottom }) => {
         return fileSaver.saveAs(image, 'meme.png');
       });
   };
-
+  
   return (
     <section className={styles.Meme} ref={ref} onClick={handleClick}>
       <h2>{top}</h2>

@@ -33,7 +33,7 @@ export const sessionLogin = (username, password) => dispatch => {
 
 export const sessionVerify = () => dispatch => {
   dispatch({
-    type:SET_SESSION_LOADING
+    type: SET_SESSION_LOADING
   });
 
   return verifySession()

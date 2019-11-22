@@ -13,7 +13,6 @@ import CreateMeme from '../containers/CreateMeme';
 import MemeList from '../containers/MemesList';
 import Header from './Header';
 
-
 const PrivateRoute = ({ ...rest }) => {
   const sessionId = useSelector(getSessionId);
   const loading = useSelector(getSessionLoading);
@@ -49,5 +48,3 @@ export default function App() {
     </Router>
   );
 }
-  
-  

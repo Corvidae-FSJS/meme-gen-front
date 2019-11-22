@@ -10,6 +10,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  null, 
+  null,
   mapDispatchToProps
 )(MemeForm);
