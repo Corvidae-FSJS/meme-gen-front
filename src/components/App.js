@@ -12,6 +12,8 @@ import SignupUser from '../containers/SignupUser';
 import CreateMeme from '../containers/CreateMeme';
 import MemeList from '../containers/MemesList';
 import Header from './Header';
+import P5Wrapper from 'react-p5-wrapper';
+import sketch from './p5';
 
 const PrivateRoute = ({ ...rest }) => {
   const sessionId = useSelector(getSessionId);
@@ -44,6 +46,7 @@ export default function App() {
         <PrivateRoute exact path="/" component={CreateMeme} />
         <PrivateRoute path="/memes" component={MemeList} />
         <Route path="/login" component={SignupUser} />
+        <P5Wrapper sketch={sketch} />
       </Switch>
     </Router>
   );
